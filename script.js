@@ -1,10 +1,4 @@
 $(document).ready(function(){
-    const arr =[
-        {firstname:"Ahmed", lastname:"Abdi", country:"Germany", score: 90,},
-        {firstname:"Jenifer", lastname:"Wambui", country:"kenya", score: 76,},
-        {firstname:"Deema", lastname:"Mohamed", country:"Palestine", score: 85,},
-        {firstname:"Mathew", lastname:"John", country:"France",score: 64,}
-    ]
 
     const btn = $('.btn')
     btn.click(function(e){
@@ -16,6 +10,25 @@ $(document).ready(function(){
         const country= $('#country').val()
         const score = parseInt($('#score').val())
 
+        const arr =[
+            {firstname:"Ahmed", lastname:"Abdi", country:"Germany", score: 90,},
+            {firstname:"Jenifer", lastname:"Wambui", country:"kenya", score: 76,},
+            {firstname:"Deema", lastname:"Mohamed", country:"Palestine", score: 85,},
+            {firstname:"Mathew", lastname:"John", country:"France",score: 64,}
+        ]
+
+        for(let i =0 ; i<arr.length; i++){
+
+            const html = `
+            <div class="card">
+                <p>${arr[i].firstname} ${arr[i].lastname}</p>
+                <p>${arr[i].country}</p>
+                <p>${arr[i].score}</p>
+            </div>`
+
+            $(main).append(html)
+        }
+
         const newObj = {
             firstname: firstname,
             lastname: lastname,
@@ -25,15 +38,6 @@ $(document).ready(function(){
 
         arr.push(newObj)
         console.log(arr)
-    
-        const html = `
-            <div class="card">
-                <p>${firstname} ${lastname}</p>
-                <p>${country}</p>
-                <p>${score}</p>
-            </div>`
-
-        $(main).append(html)
 
   })      
 })

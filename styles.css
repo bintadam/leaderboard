@@ -17,6 +17,11 @@ body{
     place-items: center;
 }
 
+.card{
+    width: max-content;
+    background-color: rgba(221, 182, 182, 0.828);
+}
+
 h1{
     font-weight: 400;
     font-size: 1.5rem;
