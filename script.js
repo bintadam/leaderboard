@@ -1,12 +1,14 @@
-const arr =[
+let arr = JSON.parse(localStorage.getItem('leaderboard')) || [
     {firstname:"Ahmed", lastname:"Abdi", country:"Germany", score: 90,},
     {firstname:"Jenifer", lastname:"Wambui", country:"kenya", score: 76,},
     {firstname:"Deema", lastname:"Mohamed", country:"Palestine", score: 85,},
     {firstname:"Mathew", lastname:"John", country:"France",score: 64,}
-]
+];
+
 
 function updateLeaderboard(){
     const content = $('.content');
+    $(content).empty()
 
     for(let i =0 ; i<arr.length; i++){
 
@@ -44,9 +46,11 @@ $(document).ready(function(){
         }
 
         arr.unshift(newObj)
-        console.log(arr)
+        localStorage.setItem("leaderboard", JSON.stringify(arr))
 
-        $(main).empty()
+        updateLeaderboard();
 
-  })      
+  });
+  
+  updateLeaderboard();
 })
