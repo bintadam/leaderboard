@@ -4,3 +4,12 @@ const arr =[
     {firstname:"Deema", lastname:"Mohamed", country:"Palestine", score: 85,},
     {firstname:"Mathew", lastname:"John", country:"France",score: 64,}
 ]
+
+
+
+$(document).ready(function(){
+  const firstname = $('#firstname').value
+  const lastname = $('#lastname').value  
+  const country= $('#country').value
+  const score = $('#score').value      
+})
