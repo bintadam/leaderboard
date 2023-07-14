@@ -8,7 +8,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    padding : 2% 12%;
+    padding : 2% 9%;
     box-sizing: inherit;
 }
 
@@ -23,7 +23,7 @@ h1{
 }
 
 input{
-    padding: 0.7rem;
+    padding: 0.8rem;
     border: 1px solid rgba(221, 182, 182, 0.828);
     margin: 1rem 0.3rem;
     filter: none;
@@ -42,7 +42,7 @@ input::-webkit-inner-spin-button{
 
 .btn{
     background-color: rgba(221, 182, 182, 0.828);   
-    padding: 0.7rem;
+    padding: 0.7rem 1rem;
     border: none;
     font-size: 0.9rem;
     color: #fff;
