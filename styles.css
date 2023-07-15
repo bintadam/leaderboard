@@ -12,19 +12,25 @@ body{
     box-sizing: inherit;
 }
 
+h1{
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .form-group{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
-
-
 
 .list{
     width: 100%;
 }
 
 .lists{
-    background-color: rgba(226, 191, 191, 0.828);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(227, 198, 198, 0.828);
     list-style: none;
     margin-bottom: 0.2rem;
     padding: 0.5rem;
@@ -32,16 +38,14 @@ body{
 
 .lists li{
     display: inline-block;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
 }
 
 .img{
     height: 0.7rem;
-}
-
-h1{
-    font-weight: 400;
-    font-size: 1.5rem;
-    text-align: center;
 }
 
 input{
@@ -62,10 +66,16 @@ input::-webkit-inner-spin-button{
     margin: 0;
 }
 
-/* .btn{
+.btn-list{
+    border: none;
+    border-radius: 3rem;
+    padding: 0.8rem;
+}
+
+.btn{
     background-color: rgba(221, 182, 182, 0.828);   
     border: none;
     font-size: 0.6rem;
     color: #fff;
-} */
+}
 
