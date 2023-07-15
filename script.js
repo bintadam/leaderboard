@@ -19,7 +19,7 @@ function updateLeaderboard(){
                 <li>${arr[i].country}</li>
                 <li>${arr[i].score}</li>
                 <li>
-                    <button class="btn-lis btn-delete"><img class="img" src="icons8-müll.svg" alt=""></button>
+                    <button class="btn-list btn-delete" data-index="${i}"><img class="img" src="icons8-müll.svg" alt=""></button>
                     <button class="btn-list btn-add">+5</button>
                     <button class="btn-list btn-subtract">-5</button></li>
             </ul>
@@ -27,6 +27,18 @@ function updateLeaderboard(){
 
         $(content).append(html)
     }
+
+    $('.btn-delete').click(function(e){
+        e.preventDefault()
+
+        const index = $(this).data('index');
+
+        arr.splice(index, 1);
+
+        localStorage.setItem('leaderboard', JSON.stringify(arr))
+
+        updateLeaderboard()
+    })
 
 }
 
@@ -55,14 +67,6 @@ $(document).ready(function(){
         updateLeaderboard();
 
   });
-
-  const btnDelete = $('btn-delete')
-  btnDelete.click(function(e){
-    e.preventDefault()
-    arr.map(function(obj){
-        
-    })
-  })
   
   updateLeaderboard();
 })
