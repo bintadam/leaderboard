@@ -21,6 +21,7 @@ h1{
 .form-group{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 1rem;
 }
 
 .list{
@@ -30,7 +31,7 @@ h1{
 .lists{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: rgba(227, 198, 198, 0.828);
+    background-color: rgba(221, 182, 182, 0.828);
     list-style: none;
     margin-bottom: 0.2rem;
     padding: 0.5rem;
@@ -40,8 +41,8 @@ h1{
     display: inline-block;
     justify-content: space-between;
     text-transform: uppercase;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .img{
@@ -75,7 +76,7 @@ input::-webkit-inner-spin-button{
 .btn{
     background-color: rgba(221, 182, 182, 0.828);   
     border: none;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     color: #fff;
 }
 
