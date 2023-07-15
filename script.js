@@ -20,12 +20,13 @@ function updateLeaderboard(){
                 <li>${arr[i].score}</li>
                 <li>
                     <button class="btn-list btn-delete" data-index="${i}"><img class="img" src="icons8-müll.svg" alt=""></button>
-                    <button class="btn-list btn-add">+5</button>
-                    <button class="btn-list btn-subtract">-5</button></li>
+                    <button class="btn-list btn-add" data-index="${i}" >+5</button>
+                    <button class="btn-list btn-subtract" data-index="${i}">-5</button></li>
             </ul>
         </div>`
 
         $(content).append(html)
+
     }
 
     $('.btn-delete').click(function(e){
@@ -40,6 +41,27 @@ function updateLeaderboard(){
         updateLeaderboard()
     })
 
+    $('.btn-add').click(function(e){
+        e.preventDefault()
+        const index = $(this).data('index');
+
+        arr[index].score += 5
+
+        localStorage.setItem('leaderboard', JSON.stringify(arr))
+
+        updateLeaderboard()
+    })
+    
+    $('.btn-subtract').click(function(e){
+        e.preventDefault()
+        const index = $(this).data('index');
+
+        arr[index].score -= 5
+
+        localStorage.setItem('leaderboard', JSON.stringify(arr))
+
+        updateLeaderboard()
+    })
 }
 
 $(document).ready(function(){
