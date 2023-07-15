@@ -17,16 +17,25 @@ body{
     grid-template-columns: repeat(5, 1fr);
 }
 
+
+
 .list{
-    display: block;
-    
+    width: 100%;
 }
 
 .lists{
-    display: inline-block;
-    background-color: rgba(221, 182, 182, 0.828);
-    width: max-content;
+    background-color: rgba(226, 191, 191, 0.828);
     list-style: none;
+    margin-bottom: 0.2rem;
+    padding: 0.5rem;
+}
+
+.lists li{
+    display: inline-block;
+}
+
+.img{
+    height: 0.7rem;
 }
 
 h1{
@@ -53,10 +62,10 @@ input::-webkit-inner-spin-button{
     margin: 0;
 }
 
-.btn{
+/* .btn{
     background-color: rgba(221, 182, 182, 0.828);   
     border: none;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     color: #fff;
-}
+} */
 

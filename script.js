@@ -18,6 +18,10 @@ function updateLeaderboard(){
                 <li>${arr[i].firstname} ${arr[i].lastname}</li>
                 <li>${arr[i].country}</li>
                 <li>${arr[i].score}</li>
+                <li>
+                    <button class="btn-list"><img class="img" src="icons8-müll.svg" alt=""></button>
+                    <button class="btn-list">+5</button>
+                    <button class="btn-list">-5</button></li>
             </ul>
         </div>`
 
