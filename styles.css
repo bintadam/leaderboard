@@ -18,10 +18,18 @@ h1{
     text-align: center;
 }
 
+.error-message{
+    text-align: center;
+    color: red;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+
 .form-group{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 1rem;
+    display: inline-block;
+    padding-left: 15%;
+    margin-bottom: 0.5rem;
 }
 
 .list{
@@ -31,10 +39,10 @@ h1{
 .lists{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: rgba(221, 182, 182, 0.828);
+    background-color: rgba(241, 169, 169, 0.828);
     list-style: none;
     margin-bottom: 0.2rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
 }
 
 .lists li{
@@ -42,7 +50,16 @@ h1{
     justify-content: space-between;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
+    padding: 0.8rem;
+    color: #232323;
+}
+
+.time{
+    display: block;
+    font-family: 300;
+    font-size: 11px;
+    color: rgb(93, 93, 93);
 }
 
 .img{
@@ -74,9 +91,66 @@ input::-webkit-inner-spin-button{
 }
 
 .btn{
-    background-color: rgba(221, 182, 182, 0.828);   
+    background-color: rgba(241, 169, 169, 0.828);   
     border: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #fff;
+    padding: 0.8rem;
 }
 
+@media only screen and (max-width:768px) {
+    body{
+        padding : 2%;
+        box-sizing: inherit;
+    }
+    
+    h1{
+        font-size: 0.8rem;
+    }
+    
+    .form-group{
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+
+    .lists{
+        display: block;
+        background-color: rgba(241, 169, 169, 0.828);
+        list-style: none;
+        margin-bottom: 0.2rem;
+    }
+    
+    .lists li{
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 0.4rem;
+        color: #232323;
+    }
+    
+    .time{
+        display: block;
+        font-family: 300;
+        font-size: 11px;
+        color: rgb(93, 93, 93);
+    }
+    
+    input{
+        padding: 0.6rem;
+        border: 1px solid rgba(221, 182, 182, 0.828);
+        margin: 0.4rem 0.3rem;
+        filter: none;
+    }
+    
+    .btn-list{
+        padding: 0.5rem;
+    }
+    
+    .btn{
+        background-color: rgba(241, 169, 169, 0.828);   
+        border: none;
+        font-size: 1rem;
+        color: #fff;
+        padding: 0.7rem 2rem;
+    }
+}

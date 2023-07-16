@@ -5,6 +5,30 @@ let arr = JSON.parse(localStorage.getItem('leaderboard')) || [
     {firstname:"Mathew", lastname:"John", country:"France",score: 64,}
 ];
 
+const months = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+]
+
+let now = new Date()
+let hour = now.getHours()
+let min = now.getMinutes()
+min = min >= 10 ? min : '0' + min
+
+let day = now.getDate()
+let month = months[now.getMonth()];
+let year = now.getFullYear()
+
 
 function updateLeaderboard(){
     const content = $('.content');
@@ -15,7 +39,7 @@ function updateLeaderboard(){
         const html = `
         <div class="list">
             <ul class="lists">
-                <li>${arr[i].firstname} ${arr[i].lastname}</li>
+                <li>${arr[i].firstname} ${arr[i].lastname}<span class='time'>${month.slice(0,3).toUpperCase()} ${day}, ${year} ${hour}:${min}</span></li>
                 <li>${arr[i].country}</li>
                 <li>${arr[i].score}</li>
                 <li>
@@ -66,11 +90,13 @@ function updateLeaderboard(){
 
 $(document).ready(function(){
 
+    const main = $('.main')
+    $(main).append("<p class='error-message' style='display: none;'>All field are required. </p>")
+
     const btn = $('.btn')
     btn.click(function(e){
         e.preventDefault()
 
-        const main = $('.main')
         const firstname = $('#firstname').val()
         const lastname = $('#lastname').val()  
         const country= $('#country').val()
@@ -82,9 +108,13 @@ $(document).ready(function(){
             country: country,
             score: score
         }
+        if(!firstname ||!lastname ||!country ||!score){
+            $('.error-message').show();
+        } else {
+            arr.unshift(newObj)
+            localStorage.setItem("leaderboard", JSON.stringify(arr))
+        }
 
-        arr.unshift(newObj)
-        localStorage.setItem("leaderboard", JSON.stringify(arr))
 
         updateLeaderboard();
 
