@@ -105,12 +105,11 @@ input::-webkit-inner-spin-button{
     }
     
     h1{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     
     .form-group{
         display: block;
-        margin-bottom: 0.3rem;
     }
 
     .lists{
@@ -131,15 +130,13 @@ input::-webkit-inner-spin-button{
     .time{
         display: block;
         font-family: 300;
-        font-size: 11px;
+        font-size: 10px;
         color: rgb(93, 93, 93);
     }
     
     input{
-        padding: 0.6rem;
         border: 1px solid rgba(221, 182, 182, 0.828);
-        margin: 0.4rem 0.3rem;
-        filter: none;
+        width: 100%;
     }
     
     .btn-list{
@@ -151,6 +148,7 @@ input::-webkit-inner-spin-button{
         border: none;
         font-size: 1rem;
         color: #fff;
-        padding: 0.7rem 2rem;
+        padding: 0.7rem;
+        width: 100%;
     }
 }
