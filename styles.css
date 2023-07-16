@@ -110,6 +110,8 @@ input::-webkit-inner-spin-button{
     
     .form-group{
         display: block;
+        padding: 0rem;
+        margin: 1rem 0rem;
     }
 
     .lists{
@@ -135,7 +137,7 @@ input::-webkit-inner-spin-button{
     }
     
     input{
-        border: 1px solid rgba(221, 182, 182, 0.828);
+        margin: 0.2rem 0rem;
         width: 100%;
     }
     
